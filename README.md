@@ -57,7 +57,7 @@ A arquitetura foi dividida para contornar a limitação de portas (GPIOs) e otim
 
 * Pacote de placas do **ESP8266** instalado na IDE.
 
-* Bibliotecas para o sensor ultrassônico e display (ex: `NewPing`, `Adafruit_SSD1306` - se aplicável).
+* Bibliotecas para o sensor ultrassônico: HC-SR04.
 
 ### Passos
 
@@ -68,7 +68,7 @@ A arquitetura foi dividida para contornar a limitação de portas (GPIOs) e otim
    
    ```
 
-2. Abra o arquivo do código fonte `.ino` ou projeto do PlatformIO na sua IDE.
+2. Abra o arquivo do código fonte `.ino` na sua IDE.
 
 3. Configure as credenciais de Wi-Fi (SSID e Senha) no código, caso esteja utilizando comunicação via rede.
 
