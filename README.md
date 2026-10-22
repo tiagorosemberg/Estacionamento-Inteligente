@@ -49,7 +49,7 @@ A arquitetura foi dividida para contornar a limitação de portas (GPIOs) e otim
 
 > `![Esquemático do Circuito](caminho/para/imagem.png)`
 
-## 🚀 Como executar o projeto
+## Como executar o projeto
 
 ### Pré-requisitos
 
