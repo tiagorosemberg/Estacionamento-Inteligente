@@ -45,7 +45,7 @@ A arquitetura foi dividida para contornar a limitação de portas (GPIOs) e otim
 
 *(Insira aqui a imagem do seu esquemático elétrico atualizado para o ESP8266)*
 
- ![Esquemático do Circuito](./imagens/esquematico_todo)
+ ![Esquemático do Circuito](./imagens/esquematico_todo.png)
 
 ## Como executar o projeto
 
