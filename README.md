@@ -43,9 +43,8 @@ A arquitetura foi dividida para contornar a limitação de portas (GPIOs) e otim
 
 3. **Comunicação / Exibição:** Os dois módulos ESP8266 podem se comunicar via rede Wi-Fi (ex: protocolo MQTT, requisições HTTP, ou ESP-NOW) para somar as vagas livres e enviar a informação final ao monitor.
 
-*(Insira aqui a imagem do seu esquemático elétrico atualizado para o ESP8266)*
-
  ![Esquemático do Circuito](./imagens/esquematico_todo.png)
+ <sub>Esta é a legenda da sua imagem.</sub>
 
 ## Como executar o projeto
 
