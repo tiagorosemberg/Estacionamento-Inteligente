@@ -62,7 +62,7 @@ A arquitetura foi dividida para contornar a limitação de portas (GPIOs) e otim
 1. Clone este repositório:
 
    ```
-   git clone https://github.com/SEU-USUARIO/estacionamento-inteligente.git
+   git clone https://github.com/tiagorosemberg/Estacionamento-Inteligente
    
    ```
 
