@@ -8,6 +8,7 @@ O projeto consiste no desenvolvimento de uma maquete de estacionamento inteligen
 
 A partir da leitura de sensores ultrassônicos, o sistema identifica se uma vaga está livre ou ocupada, acende LEDs indicativos locais e atualiza um monitor central para que o usuário acompanhe a capacidade do estacionamento em tempo real.
 
+
 ## Funcionalidades
 
 * **Detecção de Ocupação:** Monitoramento individual de cada vaga em tempo real.
@@ -17,6 +18,7 @@ A partir da leitura de sensores ultrassônicos, o sistema identifica se uma vaga
 * **Processamento Distribuído:** Uso de 2x ESP8266 dividindo a carga de leitura (4 vagas por microcontrolador).
 
 * **Interface de Contagem:** Exibição centralizada da quantidade de vagas disponíveis. Integrado via Wi-Fi, ao HiveMQ WebSocket, pelo protocoloc MQTT.
+
 
 ## Lista de Componentes (Hardware)
 
@@ -33,6 +35,7 @@ Abaixo está a lista atualizada de materiais utilizados no protótipo:
 | **1** | Cabo USB | Alimentação dos microcontroladores e periféricos. | 
 | **1** | Estrutura da Maquete | Base e divisórias físicas para representar o estacionamento. | 
 
+
 ## Arquitetura do Sistema
 
 A arquitetura foi dividida para contornar a limitação de portas (GPIOs) e otimizar a leitura dos sensores:
@@ -44,14 +47,22 @@ A arquitetura foi dividida para contornar a limitação de portas (GPIOs) e otim
 3. **Comunicação / Exibição:** Os dois módulos ESP8266 podem se comunicar via rede Wi-Fi (ex: protocolo MQTT, requisições HTTP, ou ESP-NOW) para somar as vagas livres e enviar a informação final ao monitor.
 
  ![Esquemático do Circuito](./imagens/esquematico_todo.png)
+ 
  <sub>Imagem do esquemático completo.</sub>
+
+
 
  ![Esquemático do Circuito](./imagens/esquematico_esp.png)
  
  <sub>Imagem da seção do esquemático referente ao ESP.</sub>
 
+
+
   ![Esquemático do Circuito](./imagens/esquematico_led.png)
+  
  <sub>Imagem da seção do esquemático referente aos LEDs.</sub>
+
+
 
 ## Como executar o projeto
 
@@ -82,11 +93,14 @@ A arquitetura foi dividida para contornar a limitação de portas (GPIOs) e otim
 
 6. Monte o circuito conforme o esquemático elétrico e ligue a alimentação.
 
-   **ATENÇÃO:** Confira a pinagem correta de acordo com o seu microcontrolador. No código desse projeto utilizamos um ESP8266, e os pinos atribuidos estão comentados no código.
 
-     ![Esquemático do Circuito](./imagens/ESP8266_PINOUT.png)
+**ATENÇÃO:** Confira a pinagem correta de acordo com o seu microcontrolador. No código desse projeto utilizamos um ESP8266, e os pinos atribuidos estão comentados no código.
+
+   ![Esquemático do Circuito](./imagens/ESP8266_PINOUT.png)
    
-     <sub>ESP8266 Pinout Reference.</sub>
+   <sub>ESP8266 Pinout Reference.</sub>
+
+
 
 ## Membros do Grupo
 
