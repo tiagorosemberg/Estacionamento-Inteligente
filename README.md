@@ -47,6 +47,7 @@ A arquitetura foi dividida para contornar a limitação de portas (GPIOs) e otim
  <sub>Imagem do esquemático completo.</sub>
 
  ![Esquemático do Circuito](./imagens/esquematico_esp.png)
+ 
  <sub>Imagem da seção do esquemático referente ao ESP.</sub>
 
   ![Esquemático do Circuito](./imagens/esquematico_led.png)
@@ -84,6 +85,7 @@ A arquitetura foi dividida para contornar a limitação de portas (GPIOs) e otim
    **ATENÇÃO:** Confira a pinagem correta de acordo com o seu microcontrolador. No código desse projeto utilizamos um ESP8266, e os pinos atribuidos estão comentados no código.
 
      ![Esquemático do Circuito](./imagens/ESP8266_PINOUT.png)
+   
      <sub>ESP8266 Pinout Reference.</sub>
 
 ## Membros do Grupo
