@@ -44,7 +44,13 @@ A arquitetura foi dividida para contornar a limitação de portas (GPIOs) e otim
 3. **Comunicação / Exibição:** Os dois módulos ESP8266 podem se comunicar via rede Wi-Fi (ex: protocolo MQTT, requisições HTTP, ou ESP-NOW) para somar as vagas livres e enviar a informação final ao monitor.
 
  ![Esquemático do Circuito](./imagens/esquematico_todo.png)
- <sub>Esta é a legenda da sua imagem.</sub>
+ <sub>Imagem do esquemático completo.</sub>
+
+ ![Esquemático do Circuito](./imagens/esquematico_esp.png)
+ <sub>Imagem da seção do esquemático referente ao ESP.</sub>
+
+  ![Esquemático do Circuito](./imagens/esquematico_led.png)
+ <sub>Imagem da seção do esquemático referente aos LEDs.</sub>
 
 ## Como executar o projeto
 
@@ -67,13 +73,18 @@ A arquitetura foi dividida para contornar a limitação de portas (GPIOs) e otim
 
 2. Abra o arquivo do código fonte `.ino` na sua IDE.
 
-3. Configure as credenciais de Wi-Fi (SSID e Senha) no código, caso esteja utilizando comunicação via rede.
+3. Configure as credenciais de Wi-Fi (SSID e Senha) no código.
 
 4. Conecte o primeiro ESP8266 ao computador, selecione a placa correta e a porta COM, e faça o upload do código referente ao "Nó 1".
 
 5. Repita o processo para o segundo ESP8266 com o código do "Nó 2".
 
 6. Monte o circuito conforme o esquemático elétrico e ligue a alimentação.
+
+   **ATENÇÃO:** Confira a pinagem correta de acordo com o seu microcontrolador. No código desse projeto utilizamos um ESP8266, e os pinos atribuidos estão comentados no código.
+
+     ![Esquemático do Circuito](./imagens/ESP8266_PINOUT.png)
+     <sub>ESP8266 Pinout Reference.</sub>
 
 ## Membros do Grupo
 
