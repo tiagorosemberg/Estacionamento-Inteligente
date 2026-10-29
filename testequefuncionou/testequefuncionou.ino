@@ -11,15 +11,17 @@ byte greenPin2 = 16; //D0
 
 HCSR04 hc(trigPin, new int[2]{echoPin1, echoPin2}, 2); //initialisation class HCSR04 (trig pin , echo pin, number of sensor)
 
-new byte reds[2] = {redPin1, redPin2};
-new byte greens[2] = {greenPin1, greenPin2};
 
 void setup(){
+
+  byte reds[2] = {redPin1, redPin2};
+  byte greens[2] = {greenPin1, greenPin2};
+
   Serial.begin(9600);
   int i;
   for (i = 0; i < 2; i++){
     pinMode(reds[i], OUTPUT);
-    pinMOde(greens[i], OUTPUT);
+    pinMode(greens[i], OUTPUT);
   }
   pinMode(echoPin1, INPUT);
   pinMode(echoPin2, INPUT);
@@ -30,12 +32,12 @@ void loop()
 {
 
   float dist = hc.dist(0);
-  if (dist <= 10 && dist > 0){
-    digitalWrite(ledPin1, HIGH);
-    digitalWrite(ledPin2, LOW);
+  if (dist <= 7.5 && dist > 0){
+    digitalWrite(redPin1, HIGH);
+    digitalWrite(greenPin1, LOW);
   } else {
-    digitalWrite(ledPin1, LOW);
-    digitalWrite(ledPin2, HIGH);
+    digitalWrite(redPin1, LOW);
+    digitalWrite(greenPin1, HIGH);
   }
 
   /*int i;
@@ -46,5 +48,5 @@ void loop()
         Serial.println( hc.dist(i) );
 
     }*/ //return curent distance (cm) in serial for sensor 1 to 6
-    delay(500);                        // we suggest to use over 60ms measurement cycle, in order to prevent trigger signal to the echo signal.
+    delay(500);
 }
