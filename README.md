@@ -68,11 +68,11 @@ A arquitetura foi dividida para contornar a limitação de portas (GPIOs) e otim
 
 ### Pré-requisitos
 
-* [Arduino IDE](https://www.arduino.cc/en/software) ou [VS Code com PlatformIO](https://platformio.org/).
+* [Arduino IDE](https://www.arduino.cc/en/software).
 
 * Pacote de placas do **ESP8266** instalado na IDE.
 
-* Bibliotecas para o sensor ultrassônico: HC-SR04.
+* Biblioteca para o sensor ultrassônico: [HC-SR04](https://www.arduinolibraries.info/libraries/hcsr04-ultrasonic-sensor).
 
 ### Passos
 
@@ -92,6 +92,8 @@ A arquitetura foi dividida para contornar a limitação de portas (GPIOs) e otim
 5. Repita o processo para o segundo ESP8266 com o código do "Nó 2".
 
 6. Monte o circuito conforme o esquemático elétrico e ligue a alimentação.
+
+7. Faça as alterações dos pinos de acordo com seu circuito.
 
 
 **ATENÇÃO:** Confira a pinagem correta de acordo com o seu microcontrolador. No código desse projeto utilizamos um ESP8266, e os pinos atribuidos estão comentados no código.
