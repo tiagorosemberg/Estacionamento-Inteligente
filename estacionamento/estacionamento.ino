@@ -12,10 +12,11 @@ byte greenPin2 = 16; //D0
 HCSR04 hc(trigPin, new int[2]{echoPin1, echoPin2}, 2); //initialisation class HCSR04 (trig pin , echo pin, number of sensor)
 
 
+byte reds[2] = {redPin1, redPin2};
+byte greens[2] = {greenPin1, greenPin2};
+
 void setup(){
 
-  byte reds[2] = {redPin1, redPin2};
-  byte greens[2] = {greenPin1, greenPin2};
 
   Serial.begin(9600);
   int i;
