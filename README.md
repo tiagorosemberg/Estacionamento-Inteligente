@@ -102,6 +102,13 @@ A arquitetura foi dividida para contornar a limitação de portas (GPIOs) e otim
    
    <sub>ESP8266 Pinout Reference.</sub>
 
+## Interface Integrada
+
+Utilizando o HiveMQ, que serve como uma central de mensagens que conecta e organiza a comunicação entre dispositivos (como sensores e robôs) e sistemas de computador.
+
+Broker Server: mqtt-dashboard.com
+Porta WSS: 8884
+Tópico MQTT: estacionamento/vagas
 
 
 ## Membros do Grupo
