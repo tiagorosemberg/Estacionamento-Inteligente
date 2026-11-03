@@ -31,13 +31,17 @@ void setup(){
 void loop()
 {
 
-  float dist = hc.dist(0);
-  if (dist <= 7.5 && dist > 0){
-    digitalWrite(redPin1, HIGH);
-    digitalWrite(greenPin1, LOW);
-  } else {
-    digitalWrite(redPin1, LOW);
-    digitalWrite(greenPin1, HIGH);
+  float dist;
+  int i = 0;
+  for(i = 0; i < 2; i++){
+    dist = hc.dist(i);
+    if (dist <= 7.5 && dist > 0){
+      digitalWrite(reds[i], HIGH);
+      digitalWrite(greens[i], LOW);
+    } else {
+      digitalWrite(reds[i], LOW);
+      digitalWrite(greens[i], HIGH);
+    }
   }
 
   /*int i;
