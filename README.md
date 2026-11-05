@@ -74,7 +74,7 @@ A arquitetura foi dividida para contornar a limitação de portas (GPIOs) e otim
 
 * Pacote de placas do **ESP8266** instalado na IDE.
 
-  OBSERVAÇÃO: Para o Arduino IDE, serão necessários esses passos:
+  **OBSERVAÇÃO** - Para o Arduino IDE, serão necessários esses passos:
 
    * Abra o ArduinoIDE, no cabeçalho clique em Arquivo → Preferências. Na janela de configurações dentro preferências localize o campo “URLs Adicionais para Gerenciadores de Placas” e cole este link [http://arduino.esp8266.com/stable/package_esp8266com_index.json](http://arduino.esp8266.com/stable/package_esp8266com_index.json) no espaço indicado e aperte o botão OK.
  
