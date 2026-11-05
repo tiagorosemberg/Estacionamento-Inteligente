@@ -50,7 +50,7 @@ A arquitetura foi dividida para contornar a limitação de portas (GPIOs) e otim
 
  ![Esquemático do Circuito](./imagens/esquematico_todo.png)
  
- <sub>Imagem do esquemático completo.</sub>
+ <sub>Exemplo do esquemático completo com dois ESP's.</sub>
 
 
 
@@ -62,7 +62,7 @@ A arquitetura foi dividida para contornar a limitação de portas (GPIOs) e otim
 
   ![Esquemático do Circuito](./imagens/esquematico_led.png)
   
- <sub>Imagem da seção do esquemático referente aos LEDs.</sub>
+ <sub>Imagem da seção do esquemático referente aos LEDs para dois ESP's.</sub>
 
 
 
