@@ -70,10 +70,19 @@ A arquitetura foi dividida para contornar a limitação de portas (GPIOs) e otim
 
 * [Arduino IDE](https://www.arduino.cc/en/software).
 
+* Bibliotecas: Sensor ultrassônico [HC-SR04](https://www.arduinolibraries.info/libraries/hcsr04-ultrasonic-sensor), MQTT [PubSubClient](https://docs.arduino.cc/libraries/pubsubclient/).
+
 * Pacote de placas do **ESP8266** instalado na IDE.
 
-* Biblioteca para o sensor ultrassônico: [HC-SR04](https://www.arduinolibraries.info/libraries/hcsr04-ultrasonic-sensor).
+  OBSERVAÇÃO: Para o Arduino IDE, serão necessários esses passos:
 
+   * Abra o ArduinoIDE, no cabeçalho clique em Arquivo → Preferências. Na janela de configurações dentro preferências localize o campo “URLs Adicionais para Gerenciadores de Placas” e cole este link [http://arduino.esp8266.com/stable/package_esp8266com_index.json](http://arduino.esp8266.com/stable/package_esp8266com_index.json) no espaço indicado e aperte o botão OK.
+ 
+   * Em seguida vá para o menu Ferramentas → Placa → Gerenciador de Placas e no campo de pesquisa, digite ESP8266 e procure por “esp8266 by ESP8266 Community”. Clique em instalar e após a instalação, reinicie o ArduinoIDE.
+ 
+   * Ainda no cabeçalho clique novamente em Ferramentas → Placa e então procure pela placa Lolin(Wemos) D1 R2 & Mini, note que apesar de existir a opção Generic ESP8266 Module, não é a utilizada.
+     
+  
 ### Passos
 
 1. Clone este repositório:
