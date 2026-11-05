@@ -26,13 +26,13 @@ Abaixo está a lista atualizada de materiais utilizados no protótipo:
 
 | Qtd. | Componente | Função no Projeto | 
 | ----- | ----- | ----- | 
-| **2** | **Módulo ESP8266** (NodeMCU/Wemos) | Microcontroladores com Wi-Fi. Cada um processa e controla os dados de 4 vagas. | 
-| **4** | Sensores Ultrassônicos HC-SR04 | Detecção da presença de veículos nas 8 vagas da maquete. | 
-| **4** | LEDs | Indicação visual do estado individual de cada vaga. | 
-| **4** | Resistores | Controle da corrente nos LEDs | 
+| **3** | **Módulo ESP8266** (NodeMCU/Wemos) | Microcontroladores com Wi-Fi. Cada um processa e controla os dados de 4 vagas. | 
+| **6** | Sensores Ultrassônicos HC-SR04 | Detecção da presença de veículos nas 8 vagas da maquete. | 
+| **6** | LEDs | Indicação visual do estado individual de cada vaga. | 
+| **6** | Resistores | Controle da corrente nos LEDs | 
 | **1** | Monitor | Exibição das vagas disponíveis. Conectado ao HiveMQ. | 
 | **-** | Protoboards e Cabos Jumper | Montagem e interligação elétrica dos componentes. | 
-| **1** | Cabo USB | Alimentação dos microcontroladores e periféricos. | 
+| **3** | Cabo Micro-USB | Alimentação dos microcontroladores e periféricos. | 
 | **1** | Estrutura da Maquete | Base e divisórias físicas para representar o estacionamento. | 
 
 
@@ -40,11 +40,13 @@ Abaixo está a lista atualizada de materiais utilizados no protótipo:
 
 A arquitetura foi dividida para contornar a limitação de portas (GPIOs) e otimizar a leitura dos sensores:
 
-1. **Nó 1 (ESP8266 A):** Lê 2 sensores ultrassônicos, controla 2 LEDs de status.
+1. **ESP8266 2:** Lê 2 sensores ultrassônicos, controla 2 LEDs de status.
 
-2. **Nó 2 (ESP8266 B):** Lê 2 sensores ultrassônicos, controla 2 LEDs de status.
+2. **ESP8266 2:** Lê 2 sensores ultrassônicos, controla 2 LEDs de status.
 
-3. **Comunicação / Exibição:** Os dois módulos ESP8266 podem se comunicar via rede Wi-Fi (ex: protocolo MQTT, requisições HTTP, ou ESP-NOW) para somar as vagas livres e enviar a informação final ao monitor.
+3. **ESP8266 3:** Lê 2 sensores ultrassônicos, controla 2 LEDs de status. 
+
+4. **Comunicação / Exibição:** Os dois módulos ESP8266 se comunicam via rede Wi-Fi(protocolo MQTT) para avaliar as vagas livres e enviar a informação final ao monitor.
 
  ![Esquemático do Circuito](./imagens/esquematico_todo.png)
  
@@ -95,14 +97,13 @@ A arquitetura foi dividida para contornar a limitação de portas (GPIOs) e otim
 2. Abra o arquivo do código fonte `.ino` na sua IDE.
 
 3. Configure as credenciais de Wi-Fi (SSID e Senha) no código.
+  
+4. Faça as alterações dos pinos de acordo com seu circuito.
 
-4. Conecte o primeiro ESP8266 ao computador, selecione a placa correta e a porta COM, e faça o upload do código referente ao "Nó 1".
-
-5. Repita o processo para o segundo ESP8266 com o código do "Nó 2".
+5. Conecte os ESP8266 ao computador, selecione a placa correta e a porta correta, e faça o upload do código.
 
 6. Monte o circuito conforme o esquemático elétrico e ligue a alimentação.
 
-7. Faça as alterações dos pinos de acordo com seu circuito.
 
 
 **ATENÇÃO:** Confira a pinagem correta de acordo com o seu microcontrolador. No código desse projeto utilizamos um ESP8266, e os pinos atribuidos estão comentados no código.
