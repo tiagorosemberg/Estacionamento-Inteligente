@@ -115,6 +115,8 @@ Tópico MQTT: estacionamento/vagas
 
 * Daniel Schwartz Cantarella
 
+* oi
+
 * Tiago Rosemberg Barcellos
 
 * Pedro Bindaco Olioza
